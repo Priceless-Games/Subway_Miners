@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subway Miners</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #game-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 50px);
+            grid-gap: 5px;
+            justify-content: center;
+        }
+        .grid-cell {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #controls {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Subway Miners</h1>
+    <div id="game-grid">
+        <div class="grid-cell" id="cell-0-0"></div>
+        <div class="grid-cell" id="cell-0-1"></div>
+        <div class="grid-cell" id="cell-0-2"></div>
+        <div class="grid-cell" id="cell-1-0"></div>
+        <div class="grid-cell" id="cell-1-1"></div>
+        <div class="grid-cell" id="cell-1-2"></div>
+        <div class="grid-cell" id="cell-2-0"></div>
+        <div class="grid-cell" id="cell-2-1"></div>
+        <div class="grid-cell" id="cell-2-2"></div>
+    </div>
+    <div id="game-info"></div>
+    <div id="controls">
+        <button onclick="move('left')">Left</button>
+        <button onclick="move('right')">Right</button>
+        <button onclick="jump()">Jump</button>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
